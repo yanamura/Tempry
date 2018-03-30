@@ -1,4 +1,5 @@
 import XCTest
+import Foundation
 @testable import Tempry
 
 class TempryTests: XCTestCase {
@@ -15,7 +16,11 @@ class TempryTests: XCTestCase {
         let fm = FileManager.default
         let isExist = fm.fileExists(atPath: directory, isDirectory: &isDir)
         XCTAssertTrue(isExist)
-        XCTAssertTrue(isDir.boolValue)
+        #if !os(Linux) || swift(>=4.1)
+            XCTAssertTrue(isDir.boolValue)
+        #else
+            XCTAssertTrue(isDir)
+        #endif
 
         // clean
         do {
