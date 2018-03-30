@@ -14,6 +14,11 @@ public final class Tempry {
         }
         return directoryPath
     }
+
+    static func dispose(path: String) throws {
+        let fm = FileManager.default
+        try fm.removeItem(atPath: path)
+    }
 }
 
 public extension Tempry {
