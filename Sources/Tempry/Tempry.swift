@@ -1,7 +1,7 @@
 import Foundation
 
 public final class Tempry {
-    static func directory() throws -> String {
+    static public func directory() throws -> String {
         let directoryPath = URL(fileURLWithPath: NSTemporaryDirectory())
             .appendingPathComponent(UUID().uuidString)
             .path
@@ -15,7 +15,7 @@ public final class Tempry {
         return directoryPath
     }
 
-    static func dispose(path: String) throws {
+    static public func dispose(path: String) throws {
         let fm = FileManager.default
         try fm.removeItem(atPath: path)
     }
