@@ -1,7 +1,7 @@
 # Tempry
 [![Build Status](https://travis-ci.org/yanamura3/Tempry.svg?branch=master)](https://travis-ci.org/yanamura3/Tempry)
 
-Get a temporary directory path
+Get a random temporary directory path
 
 ## Usage
 
