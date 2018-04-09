@@ -1,5 +1,5 @@
 # Tempry
-[![Build Status](https://travis-ci.org/yanamura3/Tempry.svg?branch=master)](https://travis-ci.org/yanamura3/Tempry)
+[![Build Status](https://travis-ci.org/yanamura/Tempry.svg?branch=master)](https://travis-ci.org/yanamura3/Tempry)
 
 Get a random temporary directory path
 
@@ -7,18 +7,12 @@ Get a random temporary directory path
 
 ### create temporary directory and get the path
 ```swift
-do {
-  path = try Tempry.directory()
-} catch _ {
-}
+path = try Tempry.directory()
 ```
 
 ### delete temporary directory
 ```swift
-do {
-  try Tempry.dispose(path: path)
-} catch _ {
-}
+try Tempry.dispose(path: path)
 ```
 
 
